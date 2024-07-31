@@ -1,35 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("bg-white")
+
+
+  const colorArr = [
+    'bg-yellow-400',
+    'bg-red-600',
+    'bg-green-600',
+    'bg-pink-600',
+    'bg-purple-700',
+    'bg-gray-600',
+    'bg-white'
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={`rounded-sm border-solid ${color} h-screen w-screen`}>
+        <div className="w-auto h-14 bg-orange-300 rounded-2xl flex items-center" >
+          {colorArr.map((colorClass, index) => (
+            <button key={index} className={`${colorClass} h-8 w-20 rounded-xl`} onClick={() => setColor(colorClass)}></button>
+          ))}
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
 export default App
