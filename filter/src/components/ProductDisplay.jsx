@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductDisplay.css'
 
 function ProductDisplay({products}) {
+    
     return (
         <>
         <div className=' product-catalog'>
