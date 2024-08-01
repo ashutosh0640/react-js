@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  max-width: 1500px; /* Set the maximum width */
+  margin: 0 auto;  /*Center align the container */
+  padding: 0 20px; /* Add some padding for small devices */
+}

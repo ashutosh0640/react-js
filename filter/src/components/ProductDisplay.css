@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 1500px; /* Set the maximum width */
+    margin: 0 auto;  /*Center align the container */
+    padding: 0 20px; /* Add some padding for small devices */
+  }
+
+
+  .product-catalog {
+    border: 2px solid red;
+    margin: 20px auto;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .product-catalog>div {
+    border: 2px solid orange;
+    margin: 5px 10px;
+  }
