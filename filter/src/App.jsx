@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import ProductDisplay from './components/ProductDisplay.jsx';
+import ProductList from './components/ProductList.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -152,7 +152,7 @@ function App() {
   return (
     <>
       <h1>Product List</h1>
-      <ProductDisplay products={products}/>
+      <ProductList products={products}/>
     </>
   )
 }

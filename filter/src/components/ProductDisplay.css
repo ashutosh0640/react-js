@@ -13,14 +13,13 @@
 
 
   .product-catalog {
-    border: 2px solid red;
     margin: 20px auto;
-    width: fit-content;
+    padding: 40px;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
   }
 
   .product-catalog>div {
-    border: 2px solid orange;
     margin: 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
