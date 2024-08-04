@@ -4,13 +4,13 @@ import './App.css'
 function App() {
   const [length, setLength] = useState(8)
 
-  const [upperAllowed, setUpperAllowed] = useState(true)
+  const [upperAllowed, setUpperAllowed] = useState(false)
   const [lowerAllowed, setLowerAllowed] = useState(false)
   const [numberAllowed, setNumberAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
   var [password, setPassword] = useState('dsfs')
 
-  const passworrdArr = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ", "1234567890", "@#$%&.", "abcdefghijklmnopqrstuvwxyz"]
+  const passworrdArr = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz", "1234567890", "@#$%&."]
 
   let passwordGenerator = useCallback(() => {
     let pass = ''
@@ -77,7 +77,7 @@ function App() {
 
 
           <div className=' my-5'>
-            <input className=' rounded-xl px-2 generatedPass' type="text" readOnly placeholder='Generated Password' value={password} /><button className=' bg-blue-700 mx-4 px-2 rounded-lg text-white copy-button' onClick={copyPassword}>Copy</button><button className=' bg-blue-700 mx-4 px-2 rounded-lg text-white' onClick={resetPassword}>Reset</button>
+            <input className=' px-2 focus:outline-none rounded-xl generatedPass' type="text" readOnly placeholder='Generated Password' value={password} /><button className=' bg-blue-700 mx-4 px-2 rounded-lg text-white copy-button' onClick={copyPassword}>Copy</button><button className=' bg-blue-700 mx-4 px-2 rounded-lg text-white' onClick={resetPassword}>Reset</button>
           </div>
 
           <div className=''>
@@ -87,28 +87,28 @@ function App() {
 
           <div className=' w-2/3 text-yellow-200 checkbox-div'>
 
-            <div className=' flex flex-row justify-between'>
+            <div className=' px-24 flex flex-row justify-between'>
               <label htmlFor="upperCaseInput" className=' inline'>Upper Case: </label><input className=' check' type="checkbox" defaultChecked={upperAllowed} onChange={() => {
                 setUpperAllowed((prev) => !prev)
               }} />
             </div>
 
 
-            <div className=' flex flex-row justify-between'>
+            <div className=' px-24 flex flex-row justify-between'>
               <label htmlFor="lowerCaseInput" className=' w-fit'>Lower Case: </label><input className=' check' type="checkbox" onChange={() => {
                 setLowerAllowed((prev) => !prev)
               }} />
             </div>
 
 
-            <div className=' flex flex-row justify-between'>
+            <div className=' px-24 flex flex-row justify-between'>
               <label htmlFor="numberCaseInput" className=' w-fit'>Number: </label><input className=' check' type="checkbox" onChange={() => {
                 setNumberAllowed((prev) => !prev)
               }} />
             </div>
 
 
-            <div className=' flex flex-row justify-between'>
+            <div className=' px-24 flex flex-row justify-between'>
               <label htmlFor="specialCharInput" className=' w-fit'>Special Charactor: </label><input className=' check' type="checkbox" onChange={() => {
                 setCharAllowed((prev) => !prev)
               }} />

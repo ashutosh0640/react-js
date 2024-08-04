@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  border: 2px solid red;
+  min-width: 320px;
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgb(24, 26, 59) 0%, rgb(65, 62, 62) 100%);
+ 
+}
+
+
