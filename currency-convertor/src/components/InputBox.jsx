@@ -11,7 +11,7 @@ function InputBox({FromTo, amount, onAmountChange, selectedCurrency = "usd", onC
                 <label htmlFor={amountInputId} className=' text-neutral-950'>{FromTo}</label>
 
                 <input
-                    className=' px-1 w-2/3 focus:outline-none rounded-l bg-slate-600 text-white'
+                    className=' px-1 w-2/3 focus:outline-none bg-slate-600 text-white'
                     id={amountInputId}
                     type="number"
                     placeholder='Enter Amount'
@@ -26,8 +26,12 @@ function InputBox({FromTo, amount, onAmountChange, selectedCurrency = "usd", onC
 
                 <p className=' w-fit text-neutral-950'>Currency Type</p>
 
-                <select className=' rounded-l focus:outline-none bg-slate-600 text-white'>
-                    <option value="usd">USD</option>
+                <select className=' max-h-10 focus:outline-none bg-slate-600 text-white' value={selectedCurrency}>
+                    {currencyOptions.map((option, index) => (
+                        <option className=' max-h-10' key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
                 </select>
 
             </div>
