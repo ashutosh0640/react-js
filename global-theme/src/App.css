@@ -1,0 +1,50 @@
+/* src/App.css */
+
+.navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.theme-button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Theme Styles */
+.navbar-light, .footer-light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.navbar-dark, .footer-dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.navbar-violet, .footer-violet {
+    background-color: #7f00ff;
+    color: #ffffff;
+}
+
+.navbar-orange, .footer-orange {
+    background-color: #ff7043;
+    color: #ffffff;
+}
+
+.navbar-pink, .footer-pink {
+    background-color: #ff4081;
+    color: #ffffff;
+}

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #3b3b3b;
+  /*user-select: none;*/
+  font-family: Arial, sans-serif;
+  border: 2px solid red;
+}
