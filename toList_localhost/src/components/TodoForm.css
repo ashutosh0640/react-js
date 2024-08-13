@@ -1,0 +1,27 @@
+.animated-input {
+    position: relative;
+    /* border: 2px solid #ddd; */
+    padding: 0.75rem;
+    font-size: 1rem;
+    /* border-radius: 0.5rem; */
+    /* background-color: #fff; */
+    transition: border-color 0.3s;
+  }
+
+  .animated-input:focus {
+    /* border-color: #007bff; */
+    outline: none;
+  }
+
+  .animated-input::placeholder {
+    /* color: #999; */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .animated-input:focus::placeholder {
+    color: #007bff;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    transform: translateY(-1rem);
+  }
