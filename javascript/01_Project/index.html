@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01</title>
+</head>
+
+<body>
+
+
+    <script>
+        let arr = [
+            { id: 1, item: 'Apple', price: 120, quantity: 100 },
+            { id: 2, item: 'Mango', price: 80, quantity: 300 },
+            { id: 3, item: 'Papaya', price: 60, quantity: 432 },
+            { id: 4, item: 'Potato', price: 20, quantity: 32 },
+            { id: 5, item: 'Tomato', price: 40, quantity: 322 },
+            { id: 6, item: 'Carrot', price: 30, quantity: 123 }
+        ]
+
+        console.log('arr before: ', arr);
+
+        const addArr = (item, arr) => {
+            return [item, ...arr]
+        }
+
+        const deleteObjInArr = (id, arr) => {
+            return arr.filter(item=> item.id !== id);
+        }
+
+        arr = addArr({id:7, item: 'Banana', price:60, quantity: 1000} ,arr);
+        console.log('arr after adding: ', arr);
+
+        arr2 = deleteObjInArr(2, arr)
+        console.log('arr after delete: ', arr2)
+
+
+    </script>
+
+</body>
+
+</html>
