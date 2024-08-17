@@ -9,12 +9,13 @@
 }
 
 
-body {
+
+
+html, body {
   min-width: 100dvw;
   max-width: 1500px;
   min-height: 100dvh;
   font-size: 1rem;
   overflow: hidden;
-  border: 5px solid green;
   background-color: #f0f0f0;
 }

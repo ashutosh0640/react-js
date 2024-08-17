@@ -4,7 +4,7 @@ export const TodoContext = React.createContext({
     todoList: [
         {id:1, todo: 'Todo msg', completed: false}
     ],
-    addTodo: (todoList) => {},
+    addTodo: (todo) => {},
     updateTodo: (id, todo) => {},
     deleteTodo: (id) => {},
     toggleComplete: (id) => {}
