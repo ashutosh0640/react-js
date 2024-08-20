@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 import TodoForm from './components/TodoForm'
@@ -19,8 +19,6 @@ function App() {
     //   ...item,
 
     setTodoList((prev)=>prev.map((item)=>item.id===id?todo:item))
-
-
   }
 
 
@@ -31,15 +29,31 @@ function App() {
   function toggleComplete() {
 
   }
+
+  useEffect(()=>{
+    const todoList = JSON.parse(localStorage.getItem("todolist"))
+
+    if(todoList && todoList.length>0) {
+      setTodoList(todoList)
+    }
+
+  }, [])
+
+  useEffect(()=> {
+    localStorage.setItem("todoList", JSON.stringify(todoList))
+    console.log('lodolist: ',todoList)
+  }, [todoList])
+
+
   
 
 
   return (
     <TodoProvider value={{todoList, addTodo, updateTodo, deleteTodo, toggleComplete}}>
       <TodoForm />
-      <div>{todoList.map((todo)=>{
+      {/* <div>{todoList.map((todo)=>{
         <TodoItem key={todo.id} todo={todo} />
-      })} </div>
+      })} </div> */}
     </TodoProvider>
   )
 }
