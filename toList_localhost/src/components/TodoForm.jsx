@@ -6,7 +6,7 @@ import './TodoForm.css'
 const TodoForm = () => {
 
   const [todo, setTodo] = useState('');
-  const { addTodo } = useTodo();
+  const { todoList, addTodo } = useTodo();
 
   const add = (e) => {
     e.preventDefault()
@@ -15,8 +15,8 @@ const TodoForm = () => {
 
     addTodo({ todo })
     setTodo("")
-    console.log(todo);
-
+    console.log('todo: ',todo);
+    console.log('todoList: ', todoList)
   }
 
   return (
