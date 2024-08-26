@@ -35,7 +35,7 @@ function App() {
       <h1 className="text-3xl font-bold ">
         React Redux Demo App
       </h1>
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className=" border-2 border-green-500 flex flex-row items-center justify-center gap-5 ">
         <input
           onChange={(e) => setInput(e.target.value)}
           value={input}  // Ensure that input value is managed by state
@@ -52,6 +52,16 @@ function App() {
           className="w-32 h-16 rounded-xl bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl">
           Delete
         </button>
+      </div>
+      <div className=' border-2 border-red-500'>
+        <h2 className="text-2xl font-bold my-5">Data:</h2>
+        <ul>
+          {
+            data.map((item, index, array) => (
+              <li key={index}>{item} - Index: {index} - Array Length: {array.length}</li>
+            ))
+          }
+        </ul>
       </div>
     </>
   )
