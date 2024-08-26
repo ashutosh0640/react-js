@@ -10,7 +10,11 @@ const Navbar = ({ NavbarMenuOptions, currentRoute, setCurrentRoute }) => {
             <span className={`logo w-20 h-20 flex justify-center items-center`}>
                 <AiFillApple className=' w-20 h-20'/>
             </span>
-            <ul className={`navItems w-3/5 flex justify-between items-center text-2xl font-bold`}>
+            <ul className={`navItems w-3/5 flex
+                
+                
+                
+                justify-between items-center text-2xl font-bold`}>
                 {NavbarMenuOptions.map((item, index) => (
                     <li
                         className={` hover:cursor-pointer`}
