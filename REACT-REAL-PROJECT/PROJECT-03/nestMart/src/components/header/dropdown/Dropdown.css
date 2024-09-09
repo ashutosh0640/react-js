@@ -1,0 +1,10 @@
+.header-ul li {
+    padding: 0 4px;
+    margin: 2px 0;
+}
+
+.header-ul li:hover {
+    background-color: #35ba7a9f;
+    cursor: pointer;
+    color: #fff;
+}
