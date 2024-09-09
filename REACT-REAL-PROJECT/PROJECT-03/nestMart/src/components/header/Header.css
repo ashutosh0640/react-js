@@ -1,0 +1,15 @@
+.custom-border {
+    position: relative;
+    width: 400px;
+    height: 50px;
+  }
+  
+  .custom-border::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 1px; 
+    height: 20px;
+    background-color: rgba(144, 143, 143, 0.642);
+  }
